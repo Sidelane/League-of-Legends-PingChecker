@@ -48,7 +48,8 @@ namespace PingChecker
                 "104.160.142.3",
                 "104.160.131.3",
                 "104.160.156.1",
-                "104.160.136.3"
+                "104.160.136.3",
+                "203.116.144.208"
             };
 
             string activeIp = "";
@@ -79,6 +80,10 @@ namespace PingChecker
                     activeIp = server_ip_adresses[4];
                     label3.Text = "Selected IP: 104.160.136.3";
                     break;
+                case "SEA":
+                    activeIp = server_ip_adresses[5];
+                    label3.Text = "Selected IP: 203.116.144.208";
+                    break;
                 //default:
                     //MessageBox.Show("No valid Server chosen");
                     //break;
@@ -92,6 +97,10 @@ namespace PingChecker
                     using (Ping p = new Ping()) {
                         string ms = p.Send(activeIp, 1000).RoundtripTime.ToString();
                         chart1.Series[0].Points.AddXY(ms, ms);
+
+                        if (cbUpdate.Checked) {
+                            chart1.Update();
+                        }                       
                         pingResults[i] = Convert.ToInt32(ms);
                     }
                 }
@@ -99,12 +108,10 @@ namespace PingChecker
                 MessageBox.Show("Please Select a Server");
             }
 
-
             decimal avgPing = Average(pingResults);
             avgPing = Convert.ToInt32(avgPing);
 
             label4.Text = ("Average Ping: " + Convert.ToString(avgPing));
-
         }
 
         private void ListBox1_SelectedIndexChanged(object sender, EventArgs e)

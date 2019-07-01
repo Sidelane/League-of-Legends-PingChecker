@@ -7,3 +7,4 @@ E:\Visual Studio Projects\PingChecker\PingChecker\obj\Release\PingChecker.csproj
 E:\Visual Studio Projects\PingChecker\PingChecker\obj\Release\PingChecker.csproj.CoreCompileInputs.cache
 E:\Visual Studio Projects\PingChecker\PingChecker\obj\Release\PingChecker.exe
 E:\Visual Studio Projects\PingChecker\PingChecker\obj\Release\PingChecker.pdb
+E:\Visual Studio Projects\PingChecker\PingChecker\obj\Release\PingChecker.csprojAssemblyReference.cache
