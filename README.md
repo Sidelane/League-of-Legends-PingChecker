@@ -9,4 +9,4 @@ Here is a demo Picture:
 ![](https://i.imgur.com/FOFyX4S.png)
 
 The Field repetitions shows how often the Program will Ping the Server.
-To check for consistency its best to set this Number high. (Max. 1000)
+To check for consistency its best to set this Number high. (Max. 10.000)
